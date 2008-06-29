@@ -3,7 +3,7 @@
 # Ronin Dorks - A Ruby library for Ronin that provides support for various
 # Google (tm) Dorks functionality.
 #
-# Copyright (c) 2006-2008 Hal Brodigan (postmodern.mod3 at gmail.com)
+# Copyright (c) 2008 Hal Brodigan (postmodern.mod3 at gmail.com)
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@
 
 require 'ronin/web/web'
 require 'ronin/extensions/uri'
-require 'ronin/formating/digest'
+require 'ronin/formatting/digest'
 
 require 'json'
 require 'gscraper/search'

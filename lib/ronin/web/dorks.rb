@@ -33,8 +33,24 @@ module Ronin
     module Dorks
       include GScraper
 
+      def Dorks.search(options={},&block)
+        if options[:type] == :web
+          return Search.ajax_query(options,&block)
+        else
+          return Search.web_query(options,&block)
+        end
+      end
+
+      def Dorks.inurl(pattern,options={},&block)
+        Dorks.search(options.merge(:inurl => pattern),&block)
+      end
+
+      def Dorks.allinurl(patterns,options={},&block)
+        Dorks.search(options.merge(:allinurl => patterns),&block)
+      end
+
       def Dorks.index_of_cgi_bin(options={},&block)
-        Search.ajax_query(options.merge(:exact_phrase => 'Index of cgi-bin'),&block)
+        Dorks.search(options.merge(:exact_phrase => 'Index of cgi-bin'),&block)
       end
 
       def Dorks.mysql_dump(options={},&block)
@@ -47,7 +63,7 @@ module Ronin
         query << "\"#{options[:sql]}\"" if options[:sql]
         query << options[:password].to_s.md5 if options[:password]
 
-        return Search.query(options.merge(:query => query,
+        return Dorks.search(options.merge(:query => query,
                                           :exact_phrase => '"#mysql dump"',
                                           :filetype => :sql),&block)
       end
@@ -57,56 +73,56 @@ module Ronin
       end
 
       def Dorks.cps(options={},&block)
-        Search.ajax_query(options.merge(:exact_phrase => 'Certificate Practice Statement',
-                                        :inurl => '(PDF | DOC)'),&block)
+        Dorks.search(options.merge(:exact_phrase => 'Certificate Practice Statement',
+                                   :inurl => '(PDF | DOC)'),&block)
       end
 
       def Dorks.vuln_report(options={},&block)
-        Search.ajax_query(options.merge(:exact_phrase => 'Network Vulnerability Assessment'),&block)
+        Dorks.search(options.merge(:exact_phrase => 'Network Vulnerability Assessment'),&block)
       end
 
       def Dorks.receipts(options={},&block)
-        Search.ajax_query(options.merge(:exact_phrase => 'Thank you for your order',
-                                        :with_words => ['receipt'],
-                                        :filetype => :pdf),&block)
+        Dorks.search(options.merge(:exact_phrase => 'Thank you for your order',
+                                   :with_words => ['receipt'],
+                                   :filetype => :pdf),&block)
       end
 
       def Dorks.robots_txt(options={},&block)
-        Search.ajax_query(options.merge(:exact_phrase => 'robots.txt',
-                                        :with_words => ['Disallow'],
-                                        :filetype => :txt),&block)
+        Dorks.search(options.merge(:exact_phrase => 'robots.txt',
+                                   :with_words => ['Disallow'],
+                                   :filetype => :txt),&block)
       end
 
       def Dorks.php_my_admin(options={},&block)
-        Search.ajax_query(options.merge(:with_words => ['phpMyAdmin'],
-                                        :exact_phrase => 'running on',
-                                        :inurl => 'main.php'),&block)
+        Dorks.search(options.merge(:with_words => ['phpMyAdmin'],
+                                   :exact_phrase => 'running on',
+                                   :inurl => 'main.php'),&block)
       end
 
       def Dorks.qbw(options={},&block)
-        Search.ajax_query(options.merge(:query => 'qbw',
-                                        :filetype => 'QBW'),&block)
+        Dorks.search(options.merge(:query => 'qbw',
+                                   :filetype => 'QBW'),&block)
       end
 
       def Dorks.emails_xls(options={},&block)
-        Search.ajax_query(options.merge(:filetype => 'xls',
-                                        :inurl => '"email.xls"'),&block)
+        Dorks.search(options.merge(:filetype => 'xls',
+                                   :inurl => '"email.xls"'),&block)
       end
 
       def Dorks.index_for_finances_xls(options={},&block)
-        Seach.ajax_query(options.merge(:query => 'finances.xls',
-                                       :intitle => '"Index of"'),&block)
+        Dorks.search(options.merge(:query => 'finances.xls',
+                                   :intitle => '"Index of"'),&block)
       end
 
       def Dorks.download_file(options={},&block)
-        Search.ajax_query(options.merge(:allinurl => ['download.php?',
-                                                      'file']),&block)
+        Dorks.search(options.merge(:allinurl => ['download.php?',
+                                                 'file']),&block)
       end
 
       def Dorks.download_pdf(options={},&block)
-        Search.ajax_query(options.merge(:allinurl => ['download.php?',
-                                                      'file',
-                                                      '.pdf']),&block)
+        Dorks.search(options.merge(:allinurl => ['download.php?',
+                                                 'file',
+                                                 '.pdf']),&block)
       end
     end
   end

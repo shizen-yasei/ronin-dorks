@@ -34,15 +34,19 @@ module Ronin
       include GScraper
 
       def Dorks.search(options={},&block)
-        if options[:type] == :web
+        if options[:ajax] == true
           return Search.ajax_query(options,&block)
         else
-          return Search.web_query(options,&block)
+          return Search.query(options,&block)
         end
       end
 
       def Dorks.inurl(pattern,options={},&block)
         Dorks.search(options.merge(:inurl => pattern),&block)
+      end
+
+      def Dorks.string_inurl(string,options={},&block)
+        Dorks.inurl("'#{string}'",options,&block)
       end
 
       def Dorks.allinurl(patterns,options={},&block)

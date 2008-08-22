@@ -33,11 +33,21 @@ module Ronin
     module Dorks
       include GScraper
 
+      #
+      # Creates either a <tt>GScraper::Search::WebQuery</tt> or a
+      # <tt>GScraper::Search::AJAXQuery</tt> with the given _options_.
+      # If a _block_ is given, it will be passed the newly created 
+      # query object.
+      #
+      # _options_ may contain the following keys:
+      # <tt>:ajax</tt>:: Specifies wether or not to create a
+      #                  <tt>GScraper::Search::AJAXQuery</tt>.
+      #
       def Dorks.search(options={},&block)
-        if options[:type] == :web
+        if options[:ajax] == true
           return Search.ajax_query(options,&block)
         else
-          return Search.web_query(options,&block)
+          return Search.query(options,&block)
         end
       end
 
@@ -45,8 +55,18 @@ module Ronin
         Dorks.search(options.merge(:inurl => pattern),&block)
       end
 
+      def Dorks.string_inurl(string,options={},&block)
+        Dorks.inurl("'#{string}'",options,&block)
+      end
+
       def Dorks.allinurl(patterns,options={},&block)
         Dorks.search(options.merge(:allinurl => patterns),&block)
+      end
+
+      def Dorks.all_strings_inurl(patterns,options={},&block)
+        Dorks.search(options.merge(:allinurl => patterns.map { |pattern|
+          "'#{pattern}'"
+        }),&block)
       end
 
       def Dorks.index_of_cgi_bin(options={},&block)

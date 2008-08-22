@@ -37,7 +37,20 @@ of Ronin.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Provides convenience methods for many common Google (tm) Dorks:
+  * Search for URLs containing a specified string:
+  * Search for URLs containing a specified pattern:
+  * Search for Indexes of unprotected <tt>cgi-bin</tt> directories.
+  * Search for unprotected MySQL dump files.
+  * Search for unprotected MySQL dump files containing the password hash
+    'admin'.
+  * Search for Certificate Practice Statement documents.
+  * Search for Network Vulnerability Assessemnt reports.
+  * Search for order receipts.
+  * Search for <tt>robots.txt</tt> files.
+  * Search for unprotected PHP MyAdmin panels.
+  * Search for <tt>emails.xls</tt> files.
+  * Search for <tt>finances.xls</tt> files.
 
 == SYNOPSIS:
 

@@ -58,7 +58,7 @@ of Ronin.
 
 == REQUIREMENTS:
 
-* Ronin >= 0.0.9
+* Ronin >= 0.1.0
 * GScraper >= 0.2.0
 
 == INSTALL:

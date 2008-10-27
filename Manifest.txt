@@ -5,4 +5,3 @@ Rakefile
 lib/ronin/dorks.rb
 lib/ronin/dorks/version.rb
 lib/ronin/web/dorks.rb
-test/test_ronin_dorks.rb

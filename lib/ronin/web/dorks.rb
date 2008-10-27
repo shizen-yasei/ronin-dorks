@@ -69,11 +69,29 @@ module Ronin
         }),&block)
       end
 
-      def Dorks.index_of_cgi_bin(options={},&block)
-        Dorks.search(options.merge(:exact_phrase => 'Index of cgi-bin'),&block)
+      def Dorks.index_of(path=nil,options={},&block)
+        if path
+          options = options.merge(:intitle => "\"Index of #{path}\"")
+        else
+          options = options.merge(:intitle => '"Index of"')
+        end
+
+        return Dorks.search(options,&block)
       end
 
-      def Dorks.mysql_dump(options={},&block)
+      def Dorks.index_of_cgi_bin(options={},&block)
+        Dorks.index_of('/cgi-bin',&block)
+      end
+
+      def Dorks.index_with_file(name,options={},&block)
+        Dorks.index_of(options.merge(:intext => "\"#{name}\""),&block)
+      end
+
+      def Dorks.index_with_sql(options={},&block)
+        Dorks.index_of(options.merge(:intext => '".sql"'),&block)
+      end
+
+      def Dorks.sql_dump(options={},&block)
         query = []
         
         query << "Host: #{options[:host]}" if options[:host]
@@ -84,12 +102,12 @@ module Ronin
         query << options[:password].to_s.md5 if options[:password]
 
         return Dorks.search(options.merge(:query => query,
-                                          :exact_phrase => '"#mysql dump"',
+                                          :exact_phrase => '"SQL Dump"',
                                           :filetype => :sql),&block)
       end
 
-      def Dorks.mysql_dump_admin(options={},&block)
-        Dorks.mysql_dump(options.merge(:password => :admin),&block)
+      def Dorks.sql_admin_dump(options={},&block)
+        Dorks.sql_dump(options.merge(:password => 'admin'),&block)
       end
 
       def Dorks.cps(options={},&block)

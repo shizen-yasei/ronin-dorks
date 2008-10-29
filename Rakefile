@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'hoe'
+require './tasks/spec.rb'
 require './lib/ronin/dorks/version.rb'
 
 Hoe.new('ronin-dorks', Ronin::Dorks::VERSION) do |p|

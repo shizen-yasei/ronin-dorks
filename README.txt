@@ -1,7 +1,7 @@
 = Ronin Dorks
 
 * http://ronin.rubyforge.org/dorks/
-* https://github.com/postmodern/ronin-dorks
+* http://github.com/postmodern/ronin-dorks
 * irc.freenode.net ##ronin
 * Postmodern (postmodern.mod3 at gmail.com)
 

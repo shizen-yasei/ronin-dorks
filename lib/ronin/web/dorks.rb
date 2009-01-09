@@ -101,9 +101,11 @@ module Ronin
         query << "\"#{options[:sql]}\"" if options[:sql]
         query << options[:password].to_s.md5 if options[:password]
 
-        return Dorks.search(options.merge(:query => query,
-                                          :exact_phrase => '"SQL Dump"',
-                                          :filetype => :sql),&block)
+        return Dorks.search(options.merge(
+          :query => query,
+          :exact_phrase => '"SQL Dump"',
+          :filetype => :sql
+        ),&block)
       end
 
       def Dorks.sql_admin_dump(options={},&block)
@@ -111,56 +113,77 @@ module Ronin
       end
 
       def Dorks.cps(options={},&block)
-        Dorks.search(options.merge(:exact_phrase => 'Certificate Practice Statement',
-                                   :inurl => '(PDF | DOC)'),&block)
+        Dorks.search(options.merge(
+          :exact_phrase => 'Certificate Practice Statement',
+          :inurl => '(PDF | DOC)'
+        ),&block)
       end
 
       def Dorks.vuln_report(options={},&block)
-        Dorks.search(options.merge(:exact_phrase => 'Network Vulnerability Assessment'),&block)
+        Dorks.search(options.merge(
+          :exact_phrase => 'Network Vulnerability Assessment'
+        ),&block)
       end
 
       def Dorks.receipts(options={},&block)
-        Dorks.search(options.merge(:exact_phrase => 'Thank you for your order',
-                                   :with_words => ['receipt'],
-                                   :filetype => :pdf),&block)
+        Dorks.search(options.merge(
+          :exact_phrase => 'Thank you for your order',
+          :with_words => ['receipt'],
+          :filetype => :pdf
+        ),&block)
       end
 
       def Dorks.robots_txt(options={},&block)
-        Dorks.search(options.merge(:exact_phrase => 'robots.txt',
-                                   :with_words => ['Disallow'],
-                                   :filetype => :txt),&block)
+        Dorks.search(options.merge(
+          :exact_phrase => 'robots.txt',
+          :with_words => ['Disallow'],
+          :filetype => :txt
+        ),&block)
       end
 
       def Dorks.php_my_admin(options={},&block)
-        Dorks.search(options.merge(:with_words => ['phpMyAdmin'],
-                                   :exact_phrase => 'running on',
-                                   :inurl => 'main.php'),&block)
+        Dorks.search(options.merge(
+          :with_words => ['phpMyAdmin'],
+          :exact_phrase => 'running on',
+          :inurl => 'main.php'
+        ),&block)
       end
 
       def Dorks.qbw(options={},&block)
-        Dorks.search(options.merge(:query => 'qbw',
-                                   :filetype => 'QBW'),&block)
+        Dorks.search(options.merge(
+          :query => 'qbw',
+          :filetype => 'QBW'
+        ),&block)
       end
 
       def Dorks.emails_xls(options={},&block)
-        Dorks.search(options.merge(:filetype => 'xls',
-                                   :inurl => '"email.xls"'),&block)
+        Dorks.search(options.merge(
+          :filetype => 'xls',
+          :inurl => '"email.xls"'
+        ),&block)
       end
 
       def Dorks.index_for_finances_xls(options={},&block)
-        Dorks.search(options.merge(:query => 'finances.xls',
-                                   :intitle => '"Index of"'),&block)
+        Dorks.search(options.merge(
+          :query => 'finances.xls',
+          :intitle => '"Index of"'
+        ),&block)
       end
 
       def Dorks.download_file(options={},&block)
-        Dorks.search(options.merge(:allinurl => ['download.php?',
-                                                 'file']),&block)
+        Dorks.search(options.merge(
+          :allinurl => ['download.php?', 'file']
+        ),&block)
       end
 
       def Dorks.download_pdf(options={},&block)
-        Dorks.search(options.merge(:allinurl => ['download.php?',
-                                                 'file',
-                                                 '.pdf']),&block)
+        Dorks.search(options.merge(
+          :allinurl => [
+            'download.php?',
+            'file',
+            '.pdf'
+          ]
+        ),&block)
       end
 
       def Dorks.sharepoint(options={},&block)

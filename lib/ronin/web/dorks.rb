@@ -162,6 +162,12 @@ module Ronin
                                                  'file',
                                                  '.pdf']),&block)
       end
+
+      def Dorks.sharepoint(options={},&block)
+        Dorks.search(options.merge(
+          :exact_phrase => 'all site content'
+        ),&block)
+      end
     end
   end
 end

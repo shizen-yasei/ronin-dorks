@@ -12,7 +12,7 @@ Hoe.new('ronin-dorks', Ronin::Dorks::VERSION) do |p|
   p.extra_deps = [
     ['ronin', '>=0.1.4'],
     ['ronin-web', '>=0.1.0'],
-    ['gscraper', '>=0.2.1']
+    ['gscraper', '>=0.2.2']
   ]
 end
 

@@ -67,6 +67,12 @@ of Ronin.
 
   $ sudo gem install ronin-dorks
 
+== SYNOPSIS:
+
+* Start the Ronin console with Ronin Dorks preloaded:
+
+  $ ronin-dorks
+
 == LICENSE:
 
 Ronin SQL - A Ruby library for Ronin that provides support for various

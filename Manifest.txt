@@ -2,6 +2,7 @@ History.txt
 Manifest.txt
 README.txt
 Rakefile
+bin/ronin-dorks
 lib/ronin/dorks.rb
 lib/ronin/dorks/version.rb
 lib/ronin/web/dorks.rb

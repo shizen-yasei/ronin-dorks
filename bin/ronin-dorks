@@ -5,5 +5,5 @@ require 'rubygems'
 require 'ronin/ui/command_line/commands/default'
 require 'ronin/ui/console'
 
-Ronin::UI::Console.auto_load << 'ronin-dorks'
+Ronin::UI::Console.auto_load << 'ronin/dorks'
 Ronin::UI::CommandLine::DefaultCommand.run(*ARGV)

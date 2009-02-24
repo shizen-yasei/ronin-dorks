@@ -60,8 +60,9 @@ of Ronin.
 
 == REQUIREMENTS:
 
-* {gscraper}[http://gscraper.rubyforge.org/] >= 0.2.0
-* {ronin}[http://ronin.rubyforge.org/] >= 0.1.0
+* {gscraper}[http://gscraper.rubyforge.org/] >= 0.2.2
+* {ronin}[http://ronin.rubyforge.org/] >= 0.2.1
+* {ronin-web}[http://ronin.rubyforge.org/web/] >= 0.1.1
 
 == INSTALL:
 

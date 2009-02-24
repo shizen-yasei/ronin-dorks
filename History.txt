@@ -1,3 +1,21 @@
+=== 0.1.1 / 2009-02-23
+
+* Added a git style sub-command (<tt>ronin-dorks</tt>) which starts the
+  Ronin console with <tt>ronin/dorks</tt> pre-loaded.
+* Added Dorks.all_strings_inurl.
+* Added Dorks.index_of.
+* Added Dorks.index_with_file.
+* Added Dorks.index_with_sql.
+* Added Dorks.sharepoint.
+* Require GScraper >= 0.2.2.
+* Require Ronin >= 0.2.1.
+* Require Ronin Web >= 0.1.1.
+* Renamed Dorks.mysql_dump to Dorks.sql_dump.
+* Renamed Dorks.mysql_dump_admin to Dorks.sql_admin_dump.
+* Fixed many small bugs.
+* Updated README.txt.
+* Added RSpec tests.
+
 === 0.1.0 / 2008-08-21
 
 * Initial release.

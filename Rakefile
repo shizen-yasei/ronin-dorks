@@ -11,7 +11,7 @@ Hoe.new('ronin-dorks', Ronin::Dorks::VERSION) do |p|
   p.remote_rdoc_dir = 'docs/ronin-dorks'
   p.extra_deps = [
     ['ronin', '>=0.2.1'],
-    ['ronin-web', '>=0.1.0'],
+    ['ronin-web', '>=0.1.1'],
     ['gscraper', '>=0.2.2']
   ]
 end

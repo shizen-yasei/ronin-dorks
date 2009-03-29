@@ -128,28 +128,6 @@ module Ronin
         }),&block)
       end
 
-      def Dorks.index_of(path=nil,options={},&block)
-        if path
-          options = options.merge(:intitle => "\"Index of #{path}\"")
-        else
-          options = options.merge(:intitle => '"Index of"')
-        end
-
-        return Dorks.search(options,&block)
-      end
-
-      def Dorks.index_of_cgi_bin(options={},&block)
-        Dorks.index_of('/cgi-bin',&block)
-      end
-
-      def Dorks.index_with_file(name,options={},&block)
-        Dorks.index_of(options.merge(:intext => "\"#{name}\""),&block)
-      end
-
-      def Dorks.index_with_sql(options={},&block)
-        Dorks.index_of(options.merge(:intext => '".sql"'),&block)
-      end
-
       def Dorks.sql_dump(options={},&block)
         query = []
         
@@ -174,27 +152,6 @@ module Ronin
         Dorks.sql_dump(options.merge(:password => 'admin'),&block)
       end
 
-      def Dorks.cps(options={},&block)
-        Dorks.search(options.merge(
-          :exact_phrase => 'Certificate Practice Statement',
-          :inurl => '(PDF | DOC)'
-        ),&block)
-      end
-
-      def Dorks.vuln_report(options={},&block)
-        Dorks.search(options.merge(
-          :exact_phrase => 'Network Vulnerability Assessment'
-        ),&block)
-      end
-
-      def Dorks.receipts(options={},&block)
-        Dorks.search(options.merge(
-          :exact_phrase => 'Thank you for your order',
-          :with_words => ['receipt'],
-          :filetype => :pdf
-        ),&block)
-      end
-
       def Dorks.robots_txt(options={},&block)
         Dorks.search(options.merge(
           :exact_phrase => 'robots.txt',
@@ -208,27 +165,6 @@ module Ronin
           :with_words => ['phpMyAdmin'],
           :exact_phrase => 'running on',
           :inurl => 'main.php'
-        ),&block)
-      end
-
-      def Dorks.qbw(options={},&block)
-        Dorks.search(options.merge(
-          :query => 'qbw',
-          :filetype => 'QBW'
-        ),&block)
-      end
-
-      def Dorks.emails_xls(options={},&block)
-        Dorks.search(options.merge(
-          :filetype => 'xls',
-          :inurl => '"email.xls"'
-        ),&block)
-      end
-
-      def Dorks.index_for_finances_xls(options={},&block)
-        Dorks.search(options.merge(
-          :query => 'finances.xls',
-          :intitle => '"Index of"'
         ),&block)
       end
 

@@ -25,7 +25,6 @@ require 'ronin/web/web'
 require 'ronin/extensions/uri'
 require 'ronin/formatting/digest'
 
-require 'json'
 require 'gscraper/search'
 
 module Ronin

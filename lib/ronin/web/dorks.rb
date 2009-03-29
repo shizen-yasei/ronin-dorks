@@ -23,9 +23,9 @@
 
 require 'ronin/web/web'
 require 'ronin/extensions/uri'
-require 'ronin/formatting/digest'
 
 require 'gscraper/search'
+require 'digest/md5'
 
 module Ronin
   module Web
@@ -98,7 +98,10 @@ module Ronin
         query << options[:version] if options[:version]
 
         query << "\"#{options[:sql]}\"" if options[:sql]
-        query << options[:password].to_s.md5 if options[:password]
+
+        if options[:password]
+          query << Digest::MD5.hexdigest(options[:password].to_s)
+        end
 
         return Dorks.search(options.merge(
           :query => query,

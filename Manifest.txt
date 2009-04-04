@@ -8,7 +8,7 @@ lib/ronin/dorks/version.rb
 lib/ronin/web/dorks.rb
 lib/ronin/web/dorks/dorks.rb
 lib/ronin/web/dorks/index.rb
-lib/ronin/web/dorks/docs.rb
+lib/ronin/web/dorks/documents.rb
 tasks/spec.rb
 spec/spec_helper.rb
 spec/dorks_spec.rb

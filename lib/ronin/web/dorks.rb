@@ -23,4 +23,4 @@
 
 require 'ronin/web/dorks/dorks'
 require 'ronin/web/dorks/index'
-require 'ronin/web/dorks/docs'
+require 'ronin/web/dorks/documents'

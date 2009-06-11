@@ -110,6 +110,24 @@ module Ronin
         end
       end
 
+      def Dorks.intext(pattern,options={},&block)
+        Dorks.search(options.merge(:intext => pattern),&block)
+      end
+
+      def Dorks.allintext(pattern,options={},&block)
+        Dorks.search(options.merge(:allintext => pattern),&block)
+      end
+
+      def Dorks.string_intext(string,options={},&block)
+        Dorks.intext("'#{string}'",options,&block)
+      end
+
+      def Dorks.all_strings_intext(strings,options={},&block)
+        Dorks.search(options.merge(:allintext => strings.map { |string|
+          "'#{string}'"
+        }),&block)
+      end
+
       def Dorks.inurl(pattern,options={},&block)
         Dorks.search(options.merge(:inurl => pattern),&block)
       end

@@ -128,6 +128,24 @@ module Ronin
         }),&block)
       end
 
+      def Dorks.intitle(pattern,options={},&block)
+        Dorks.search(options.merge(:intitle => pattern),&block)
+      end
+
+      def Dorks.string_intitle(string,options={},&block)
+        Dorks.intitle("'#{string}'",options,&block)
+      end
+
+      def Dorks.allintitle(patterns,options={},&block)
+        Dorks.search(options.merge(:allintitle => patterns),&block)
+      end
+
+      def Dorks.all_strings_inurl(strings,options={},&block)
+        Dorks.search(options.merge(:allintitle => strings.map { |string|
+          "'#{string}'"
+        }),&block)
+      end
+
       def Dorks.inurl(pattern,options={},&block)
         Dorks.search(options.merge(:inurl => pattern),&block)
       end

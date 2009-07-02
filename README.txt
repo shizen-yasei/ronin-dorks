@@ -40,8 +40,10 @@ of Ronin.
 == FEATURES/PROBLEMS:
 
 * Provides convenience methods for many common Google (tm) Dorks:
-  * Search for URLs containing a specified string:
-  * Search for URLs containing a specified pattern:
+  * Search for URLs containing a specified string.
+  * Search for URLs containing a specified pattern.
+  * Search for Pages containing a specified text string.
+  * Search for Pages containing a specified text pattern.
   * Search for Indexes of unprotected <tt>cgi-bin</tt> directories.
   * Search for unprotected MySQL dump files.
   * Search for unprotected MySQL dump files containing the password hash

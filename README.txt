@@ -76,6 +76,32 @@ of Ronin.
 
   $ ronin-dorks
 
+== EXAMPLES:
+
+* Search for URLs containing a pattern:
+
+    Web::Dorks.inurl('stmt=')
+
+* Search for URLs containing all patterns:
+
+    Web::Dorks.allinurl(['show', 'php', 'page'])
+
+* Search for pages containing the specified text in the title:
+
+    Web::Dorks.intitle('Profile')
+
+* Search for pages containing all specified text in the title:
+
+    Web::Dorks.allintitle(['Profile', 'Edit'])
+
+* Search for pages containing the specified text:
+
+    Web::Dorks.intext('Powered by')
+
+* Search for pages containing all specified text:
+
+    Web::Dorks.allintext(['Powered by', '0.5'])
+
 == LICENSE:
 
 Ronin SQL - A Ruby library for Ronin that provides support for various

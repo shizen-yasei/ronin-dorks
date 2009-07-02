@@ -10,7 +10,7 @@ Hoe.spec('ronin-dorks') do
   self.developer('Postmodern', 'postmodern.mod3@gmail.com')
   self.remote_rdoc_dir = 'docs/ronin-dorks'
   self.extra_deps = [
-    ['ronin', '>=0.2.2'],
+    ['ronin', '>=0.2.4'],
     ['ronin-web', '>=0.1.2'],
     ['gscraper', '>=0.2.2']
   ]

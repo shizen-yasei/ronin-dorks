@@ -1,3 +1,11 @@
+=== 0.1.2 / 2009-07-02
+
+* Use Hoe >= 2.0.0.
+* Added Web::Dorks.intext.
+* Added Web::Dorks.allintext.
+* Added Web::Dorks.string_intext.
+* Added Web::Dorks.all_strings_intext.
+
 === 0.1.1 / 2009-02-23
 
 * Added a git style sub-command (<tt>ronin-dorks</tt>) which starts the

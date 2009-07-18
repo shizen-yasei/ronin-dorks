@@ -5,6 +5,10 @@
 * Added Web::Dorks.allintext.
 * Added Web::Dorks.string_intext.
 * Added Web::Dorks.all_strings_intext.
+* Added Web::Dorks.intitle.
+* Added Web::Dorks.allintitle.
+* Added Web::Dorks.string_intitle.
+* Added Web::Dorks.all_strings_intitle.
 
 === 0.1.1 / 2009-02-23
 

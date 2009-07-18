@@ -140,7 +140,7 @@ module Ronin
         Dorks.search(options.merge(:allintitle => patterns),&block)
       end
 
-      def Dorks.all_strings_inurl(strings,options={},&block)
+      def Dorks.all_strings_intitle(strings,options={},&block)
         Dorks.search(options.merge(:allintitle => strings.map { |string|
           "'#{string}'"
         }),&block)

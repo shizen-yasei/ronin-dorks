@@ -104,7 +104,7 @@ of Ronin.
 
 == LICENSE:
 
-Ronin SQL - A Ruby library for Ronin that provides support for various
+Ronin Dorks - A Ruby library for Ronin that provides support for various
 Google (tm) Dorks and Hacking functionality.
 
 Copyright (c) 2008-2009 Hal Brodigan (postmodern.mod3 at gmail.com)

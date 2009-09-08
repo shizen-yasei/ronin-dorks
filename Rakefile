@@ -15,6 +15,11 @@ Hoe.spec('ronin-dorks') do
     ['ronin-web', '>=0.1.2'],
     ['gscraper', '>=0.2.2']
   ]
+
+  self.extra_dev_deps = [
+    ['rspec', '>=1.1.12']
+  ]
+
   self.spec_extras = {:has_rdoc => 'yard'}
 end
 

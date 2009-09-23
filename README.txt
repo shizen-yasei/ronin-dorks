@@ -58,7 +58,7 @@ install or update Overlays.
 
 * Start the Ronin console with Ronin Dorks preloaded:
 
-  $ ronin dorks
+    $ ronin dorks
 
 == EXAMPLES:
 

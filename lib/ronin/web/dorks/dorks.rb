@@ -19,9 +19,6 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-require 'ronin/web/web'
-require 'ronin/extensions/uri'
-
 require 'gscraper/search'
 require 'digest/md5'
 

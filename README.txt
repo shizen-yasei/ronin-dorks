@@ -56,23 +56,9 @@ install or update Overlays.
 
 == SYNOPSIS:
 
-  $ ronin dorks
-
-== REQUIREMENTS:
-
-* {gscraper}[http://gscraper.rubyforge.org/] >= 0.2.2
-* {ronin}[http://ronin.rubyforge.org/] >= 0.2.1
-* {ronin-web}[http://ronin.rubyforge.org/web/] >= 0.1.1
-
-== INSTALL:
-
-  $ sudo gem install ronin-dorks
-
-== SYNOPSIS:
-
 * Start the Ronin console with Ronin Dorks preloaded:
 
-  $ ronin-dorks
+  $ ronin dorks
 
 == EXAMPLES:
 
@@ -99,6 +85,16 @@ install or update Overlays.
 * Search for pages containing all specified text:
 
     Web::Dorks.allintext(['Powered by', '0.5'])
+
+== REQUIREMENTS:
+
+* {gscraper}[http://gscraper.rubyforge.org/] >= 0.2.2
+* {ronin}[http://ronin.rubyforge.org/] >= 0.2.1
+* {ronin-web}[http://ronin.rubyforge.org/web/] >= 0.1.1
+
+== INSTALL:
+
+  $ sudo gem install ronin-dorks
 
 == LICENSE:
 

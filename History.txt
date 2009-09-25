@@ -2,6 +2,7 @@
 
 * Require ronin >= 0.3.0.
 * Require rspec >= 1.2.8.
+* Require yard >= 0.2.3.5.
 * Moved to YARD based documentation.
 * Removed requirement on ronin-web.
 * Updated the project summary and 3-point description for Ronin Dorks.

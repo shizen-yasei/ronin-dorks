@@ -12,4 +12,5 @@ lib/ronin/web/dorks/documents.rb
 tasks/spec.rb
 tasks/yard.rb
 spec/spec_helper.rb
+spec/helpers/database.rb
 spec/dorks_spec.rb

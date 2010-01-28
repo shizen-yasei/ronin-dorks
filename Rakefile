@@ -22,7 +22,7 @@ Hoe.spec('ronin-dorks') do
 
   self.extra_dev_deps = [
     ['rspec', '>=1.2.8'],
-    ['yard', '>=0.4.0']
+    ['yard', '>=0.5.3']
   ]
 end
 

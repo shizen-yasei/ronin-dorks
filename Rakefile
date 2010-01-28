@@ -3,7 +3,8 @@
 require 'rubygems'
 require 'hoe'
 require 'hoe/signing'
-require './tasks/yard.rb'
+
+Hoe.plugin :yard
 
 Hoe.spec('ronin-dorks') do
   self.rubyforge_name = 'ronin'
@@ -11,8 +12,7 @@ Hoe.spec('ronin-dorks') do
 
   self.rspec_options += ['--colour', '--format', 'specdoc']
 
-  self.readme_file = 'README.rdoc'
-  self.history_file = 'History.rdoc'
+  self.yard_options += ['--protected']
   self.remote_rdoc_dir = 'docs/ronin-dorks'
 
   self.extra_deps = [
@@ -24,8 +24,6 @@ Hoe.spec('ronin-dorks') do
     ['rspec', '>=1.2.8'],
     ['yard', '>=0.4.0']
   ]
-
-  self.spec_extras = {:has_rdoc => 'yard'}
 end
 
 # vim: syntax=Ruby

@@ -28,74 +28,30 @@ module Ronin
       include GScraper
 
       #
-      # Creates either a <tt>GScraper::Search::WebQuery</tt> or a
-      # <tt>GScraper::Search::AJAXQuery</tt> with the given _options_.
+      # Creates either a `GScraper::Search::WebQuery` or a
+      # `GScraper::Search::AJAXQuery` object.
       # If a _block_ is given, it will be passed the newly created 
       # query object.
       #
-      # _options_ may contain the following keys:
-      # <tt>:ajax</tt>:: Specifies wether or not to create a
-      #                  <tt>GScraper::Search::AJAXQuery</tt>.
-      # <tt>:query</tt>:: The search query.
-      # <tt>:link</tt>:: Search for results which link to the specified
-      #                  URI.
-      # <tt>:related</tt>:: Search for results which relate to the
-      #                     specified URI.
-      # <tt>:info</tt>:: Return information about the specified URI.
-      # <tt>:site</tt>:: Limit results to the specified site.
-      # <tt>:filetype</tt>:: Limit results to those with the specified
-      #                      file-type.
-      # <tt>:allintitle</tt>:: Search for results with all of the keywords
-      #                        appearing in the title.
-      # <tt>:intitle</tt>:: Search for results with the keyword appearing
-      #                     in the title.
-      # <tt>:allintext</tt>:: Search for results with all of the keywords
-      #                       appearing in the text.
-      # <tt>:intext</tt>:: Search for results with the keyword appearing
-      #                    in the text.
-      # <tt>:allinanchor</tt>:: Search for results with all of the keywords
-      #                         appearing in the text of links.
-      # <tt>:inanchor</tt>:: Search for results with the keyword appearing
-      #                      in the text of links.
-      # <tt>:exact_phrase</tt>:: Search for results containing the specified
-      #                          exact phrase.
-      # <tt>:with_words</tt>:: Search for results containing all of the
-      #                        specified words.
-      # <tt>:without_words</tt>:: Search for results not containing any of
-      #                           the specified words.
-      # <tt>:numeric_range</tt>:: Search for results contain numbers that
-      #                           fall within the specified Range.
-      # <tt>:define</tt>:: Search for results containing the definition of
-      #                    the specified keyword.
+      # @param [Hash] options
+      #   Additional options.
       #
-      # If the <tt>:ajax</tt> option is not specified, then _options_
-      # may contain the following additional keys:
-      # <tt>:results_per_page</tt>:: Specifies the number of results
-      #                              for each page.
-      # <tt>:language</tt>:: Search for results in the specified language.
-      # <tt>:region</tt>:: Search for results from the specified region.
-      # <tt>:within_past_day</tt>:: Search for results that were created
-      #                             within the past day.
-      # <tt>:within_past_week</tt>:: Search for results that were created
-      #                              within the past week.
-      # <tt>:within_past_month</tt>:: Search for results that were created
-      #                               within the past month.
-      # <tt>:within_past_year</tt>:: Search for results that were created
-      #                              within the past year.
-      # <tt>:occurrs_within</tt>:: 
-      # <tt>:rights</tt>:: Search for results licensed under the specified
-      #                    license.
-      # <tt>:filtered</tt>:: Specifies whether or not to use SafeSearch.
-      #                      Defaults to +false+, if not specified.
+      # @option options [Boolean] :ajax
+      #   Specifies wether or not to create a
+      #   `GScraper::Search::AJAXQuery`.
       #
-      # If the <tt>:ajax</tt> option is specified, then _options_
-      # may contain the following additional keys:
-      # <tt>:language</tt>:: The search language. Defaults to <tt>:en</tt>.
-      # <tt>:sig</tt>:: The search signature. Defaults to
-      #                 <tt>582c1116317355adf613a6a843f19ece</tt>.
-      # <tt>:key</tt>:: The search key. Defaults to <tt>:notsupplied</tt>.
-      # <tt>:version</tt>:: The desired API version. Defaults to
-      #                     <tt>1.0</tt>.
+      # @yield [query]
+      #   If a block is given, it will be passed the newly created query
+      #   object.
+      #
+      # @yieldparam [GScraper::Search::WebQuery, GScraper::Search::AJAXQuery] query
+      #   The newly created query object.
+      #
+      # @return [GScraper::Search::WebQuery, GScraper::Search::AJAXQuery]
+      #   The query object.
+      #
+      # @see http://gscraper.rubyforge.org/classes/GScraper/Search/WebQuery.html
+      # @see http://gscraper.rubyforge.org/classes/GScraper/Search/AJAXQuery.html
       #
       def Dorks.search(options={},&block)
         if options[:ajax] == true

@@ -13,7 +13,7 @@ Hoe.spec('ronin-dorks') do
   self.rspec_options += ['--colour', '--format', 'specdoc']
 
   self.yard_options += ['--markup', 'markdown', '--protected']
-  self.remote_rdoc_dir = 'docs/ronin-dorks'
+  self.remote_yard_dir = 'docs/ronin-dorks'
 
   self.extra_deps = [
     ['ronin', '>=0.3.0'],

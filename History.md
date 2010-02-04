@@ -1,4 +1,4 @@
-=== 0.1.3 / 2009-09-24
+### 0.1.3 / 2009-09-24
 
 * Require ronin >= 0.3.0.
 * Require rspec >= 1.2.8.
@@ -7,7 +7,7 @@
 * Removed requirement on ronin-web.
 * Updated the project summary and 3-point description for Ronin Dorks.
 
-=== 0.1.2 / 2009-07-02
+### 0.1.2 / 2009-07-02
 
 * Use Hoe >= 2.0.0.
 * Added Web::Dorks.intext.
@@ -19,7 +19,7 @@
 * Added Web::Dorks.string_intitle.
 * Added Web::Dorks.all_strings_intitle.
 
-=== 0.1.1 / 2009-02-23
+### 0.1.1 / 2009-02-23
 
 * Added a git style sub-command (<tt>ronin-dorks</tt>) which starts the
   Ronin console with <tt>ronin/dorks</tt> pre-loaded.
@@ -37,7 +37,7 @@
 * Updated README.txt.
 * Added RSpec tests.
 
-=== 0.1.0 / 2008-08-21
+### 0.1.0 / 2008-08-21
 
 * Initial release.
 * Provides convenience methods for many common Google (tm) Dorks:

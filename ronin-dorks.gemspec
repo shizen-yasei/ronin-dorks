@@ -16,27 +16,29 @@ Gem::Specification.new do |s|
   s.executables = ["ronin-dorks"]
   s.extra_rdoc_files = [
     "ChangeLog.md",
-     "README.md"
+    "README.md"
   ]
   s.files = [
     ".gitignore",
-     ".specopts",
-     ".yardopts",
-     "COPYING.txt",
-     "ChangeLog.md",
-     "Manifest.txt",
-     "README.md",
-     "Rakefile",
-     "bin/ronin-dorks",
-     "lib/ronin/dorks.rb",
-     "lib/ronin/dorks/version.rb",
-     "lib/ronin/web/dorks.rb",
-     "lib/ronin/web/dorks/documents.rb",
-     "lib/ronin/web/dorks/dorks.rb",
-     "lib/ronin/web/dorks/index.rb",
-     "spec/dorks_spec.rb",
-     "spec/helpers/database.rb",
-     "spec/spec_helper.rb"
+    ".specopts",
+    ".yardopts",
+    "COPYING.txt",
+    "ChangeLog.md",
+    "Gemfile",
+    "Manifest.txt",
+    "README.md",
+    "Rakefile",
+    "bin/ronin-dorks",
+    "lib/ronin/dorks.rb",
+    "lib/ronin/dorks/version.rb",
+    "lib/ronin/web/dorks.rb",
+    "lib/ronin/web/dorks/documents.rb",
+    "lib/ronin/web/dorks/dorks.rb",
+    "lib/ronin/web/dorks/index.rb",
+    "ronin-dorks.gemspec",
+    "spec/dorks_spec.rb",
+    "spec/helpers/database.rb",
+    "spec/spec_helper.rb"
   ]
   s.has_rdoc = %q{yard}
   s.homepage = %q{http://github.com/ronin-ruby/ronin-dorks}
@@ -47,8 +49,8 @@ Gem::Specification.new do |s|
   s.summary = %q{A Ruby library for Ronin that provides support for various Google (tm) Dorks functionality.}
   s.test_files = [
     "spec/spec_helper.rb",
-     "spec/dorks_spec.rb",
-     "spec/helpers/database.rb"
+    "spec/dorks_spec.rb",
+    "spec/helpers/database.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -56,19 +58,28 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<bundler>, ["~> 0.9.19"])
       s.add_runtime_dependency(%q<gscraper>, ["~> 0.2.2"])
       s.add_runtime_dependency(%q<ronin>, ["~> 0.4.0"])
+      s.add_development_dependency(%q<rake>, ["~> 0.8.7"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.4.0"])
       s.add_development_dependency(%q<rspec>, ["~> 1.3.0"])
       s.add_development_dependency(%q<yard>, ["~> 0.5.3"])
     else
+      s.add_dependency(%q<bundler>, ["~> 0.9.19"])
       s.add_dependency(%q<gscraper>, ["~> 0.2.2"])
       s.add_dependency(%q<ronin>, ["~> 0.4.0"])
+      s.add_dependency(%q<rake>, ["~> 0.8.7"])
+      s.add_dependency(%q<jeweler>, ["~> 1.4.0"])
       s.add_dependency(%q<rspec>, ["~> 1.3.0"])
       s.add_dependency(%q<yard>, ["~> 0.5.3"])
     end
   else
+    s.add_dependency(%q<bundler>, ["~> 0.9.19"])
     s.add_dependency(%q<gscraper>, ["~> 0.2.2"])
     s.add_dependency(%q<ronin>, ["~> 0.4.0"])
+    s.add_dependency(%q<rake>, ["~> 0.8.7"])
+    s.add_dependency(%q<jeweler>, ["~> 1.4.0"])
     s.add_dependency(%q<rspec>, ["~> 1.3.0"])
     s.add_dependency(%q<yard>, ["~> 0.5.3"])
   end

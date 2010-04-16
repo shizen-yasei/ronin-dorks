@@ -10,5 +10,6 @@ rescue Bundler::BundlerError => e
 end
 
 require 'spec'
+require 'ronin/dorks/version'
 
 include Ronin

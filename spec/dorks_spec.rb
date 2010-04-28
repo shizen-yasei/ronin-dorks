@@ -1,6 +1,5 @@
-require 'ronin/dorks/version'
-
 require 'spec_helper'
+require 'ronin/dorks/version'
 
 describe Dorks do
   it "should have a version" do

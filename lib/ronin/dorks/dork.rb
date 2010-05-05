@@ -59,12 +59,8 @@ module Ronin
       #
       # @since 0.2.0
       #
-      def each_page(query)
-        query.each do |page|
-          sleep(self.pause) if (self.pause && self.pause > 0)
-
-          yield page
-        end
+      def each_page(query,&block)
+        query.each(&block)
       end
 
       #
@@ -104,6 +100,8 @@ module Ronin
         query = new_query()
 
         each_page(query) do |page|
+          sleep(self.pause) if (self.pause && self.pause > 0)
+
           each_url(page,&block)
         end
       end

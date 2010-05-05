@@ -1,9 +1,9 @@
 # Ronin Dorks
 
-* http://ronin.rubyforge.org/dorks/
-* http://github.com/postmodern/ronin-dorks
-* http://github.com/postmodern/ronin-dorks/issues
-* http://groups.google.com/group/ronin-ruby
+* [ronin.rubyforge.org](http://ronin.rubyforge.org)
+* [github.com/postmodern/ronin-dorks](http://github.com/postmodern/ronin-dorks)
+* [github.com/postmodern/ronin-dorks/issues](http://github.com/postmodern/ronin-dorks/issues)
+* [groups.google.com/group/ronin-ruby](http://groups.google.com/group/ronin-ruby)
 * irc.freenode.net #ronin
 
 ## DESCRIPTION:

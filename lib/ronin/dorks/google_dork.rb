@@ -93,21 +93,18 @@ module Ronin
       end
 
       #
-      # Enumerates over every URL within a page of results.
+      # Normalizes a given result from a query.
       #
-      # @param [GScraper::Search::Page] page
-      #   The page of results.
+      # @param [GScraper::Search::Result] result
+      #   The result to normalize.
       #
-      # @yield [url]
-      #   The given block will be passed every URL within the page.
-      #
-      # @yieldparam [URI::HTTP, URI::HTTPS] url
-      #   A URL within the page.
+      # @return [URI::HTTP, URI::HTTPS]
+      #   The normalized result.
       #
       # @since 0.2.0
       #
-      def each_url(page,&block)
-        page.each_url(&block)
+      def normalize_result(result)
+        result.url
       end
 
     end

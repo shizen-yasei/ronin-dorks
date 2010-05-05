@@ -11,13 +11,13 @@ describe Dorks::Dork do
       Dorks::Dork.pause.should > 0
     end
 
-    describe "new_query" do
+    describe "dork" do
       it "should be exposed for debugging purposes" do
-        @dork.should respond_to(:new_query)
+        @dork.should respond_to(:dork)
       end
 
       it "should return an empty Array" do
-        @dork.new_query.should == []
+        @dork.dork.should == []
       end
     end
 

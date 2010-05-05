@@ -39,7 +39,7 @@ module Ronin
       #
       # @since 0.2.0
       #
-      def new_query
+      def dork
         []
       end
 
@@ -90,14 +90,14 @@ module Ronin
       # @yieldparam [URI::HTTP, URI::HTTPS, String] url
       #   A URL from the query.
       #
-      # @see #new_query
+      # @see #dork
       # @see #each_page
       # @see #each_url
       #
       # @since 0.2.0
       #
       def scan(&block)
-        query = new_query()
+        query = dork()
 
         each_page(query) do |page|
           sleep(self.pause) if (self.pause && self.pause > 0)

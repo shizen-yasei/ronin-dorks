@@ -26,6 +26,8 @@ module Ronin
   module Dorks
     class Dork < Scanners::URLScanner
 
+      contextify :ronin_dork
+
       parameter :pause, :default => 1.0,
                         :description => 'Seconds to pause between pages'
 

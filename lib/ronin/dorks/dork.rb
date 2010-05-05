@@ -25,6 +25,86 @@ module Ronin
   module Dorks
     class Dork < Scanners::URLScanner
 
+      parameter :pause, :default => 1.0,
+                        :description => 'Seconds to pause between pages'
+
+      #
+      # Default method which creates a query object.
+      #
+      # @return [Array]
+      #   Returns an empty Array by default.
+      #
+      # @since 0.2.0
+      #
+      def new_query
+        []
+      end
+
+      protected
+
+      #
+      # Enumerates over every page of results from the query.
+      #
+      # @param [#each] query
+      #   The query object.
+      #
+      # @yield [page]
+      #   The given block will be passed every page.
+      #
+      # @yieldparam [#each] page
+      #   A page of results from the query.
+      #
+      # @since 0.2.0
+      #
+      def each_page(query)
+        query.each do |page|
+          sleep(self.pause) if (self.pause && self.pause > 0)
+
+          yield page
+        end
+      end
+
+      #
+      # Enumerates over every URL within a page.
+      #
+      # @param [#each] page
+      #   The page of URLs.
+      #
+      # @yield [url]
+      #   The given block will be pass every URL.
+      #
+      # @yieldparam [URI::HTTP, URI::HTTPS, String] url
+      #   A URL from the page.
+      #
+      # @since 0.2.0
+      #
+      def each_url(page,&block)
+        page.each(&block)
+      end
+
+      #
+      # Performs a query and enumerates over every URL.
+      #
+      # @yield [url]
+      #   The given block will be passed every URL found by the query.
+      #
+      # @yieldparam [URI::HTTP, URI::HTTPS, String] url
+      #   A URL from the query.
+      #
+      # @see #new_query
+      # @see #each_page
+      # @see #each_url
+      #
+      # @since 0.2.0
+      #
+      def scan(&block)
+        query = new_query()
+
+        each_page(query) do |page|
+          each_url(page,&block)
+        end
+      end
+
     end
   end
 end

@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ronin-dorks}
-  s.version = "0.1.3"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
@@ -31,13 +31,15 @@ Gem::Specification.new do |s|
     "bin/ronin-dorks",
     "lib/ronin/dorks.rb",
     "lib/ronin/dorks/dork.rb",
+    "lib/ronin/dorks/google_dork.rb",
     "lib/ronin/dorks/version.rb",
     "lib/ronin/web/dorks.rb",
     "lib/ronin/web/dorks/documents.rb",
     "lib/ronin/web/dorks/dorks.rb",
     "lib/ronin/web/dorks/index.rb",
     "ronin-dorks.gemspec",
-    "spec/dorks_spec.rb",
+    "spec/dorks/dork_spec.rb",
+    "spec/dorks/dorks_spec.rb",
     "spec/helpers/database.rb",
     "spec/spec_helper.rb"
   ]
@@ -48,7 +50,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{A Ruby library for Ronin that provides support for various Google (tm) Dorks functionality.}
   s.test_files = [
-    "spec/dorks_spec.rb",
+    "spec/dorks/dork_spec.rb",
+    "spec/dorks/dorks_spec.rb",
     "spec/helpers/database.rb",
     "spec/spec_helper.rb"
   ]

@@ -20,7 +20,7 @@ describe Dorks::Dork do
     end
   end
 
-  describe "pause" do
+  context "custom" do
     before(:all) do
       @dork = ronin_dork do
         dork do
@@ -36,8 +36,15 @@ describe Dorks::Dork do
           ]
         end
       end
+    end
 
-      @dork.pause = 2.0
+    it "should enumerate over the results, in each page, in the query" do
+      @dork.each.to_a.should == [
+        URI('http://www.example.com/'),
+        URI('http://www.ruby-lang.org/'),
+        URI('http://www.rubyflow.com/'),
+        URI('http://www.reddit.com/r/ruby')
+      ]
     end
 
     it "should pause between pages" do

@@ -11,14 +11,8 @@ describe Dorks::Dork do
       Dorks::Dork.pause.should > 0
     end
 
-    describe "dork" do
-      it "should be exposed for debugging purposes" do
-        @dork.should respond_to(:dork)
-      end
-
-      it "should return an empty Array" do
-        @dork.dork_query.should == []
-      end
+    it "should return an empty Array when calling dork_query" do
+      @dork.dork_query.should == []
     end
 
     it "should have no results" do

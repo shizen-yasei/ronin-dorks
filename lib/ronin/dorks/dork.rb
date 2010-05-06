@@ -32,18 +32,54 @@ module Ronin
                         :description => 'Seconds to pause between pages'
 
       #
-      # Default method which creates a query object.
+      # Creates a new dork.
       #
-      # @return [Array]
-      #   Returns an empty Array by default.
+      # @param [Hash] options
+      #   Additional options.
       #
       # @since 0.2.0
       #
-      def dork
-        []
+      def initialize(options={})
+        super(options)
+
+        @dork_block = nil
+      end
+
+      #
+      # Creates a new dork query.
+      #
+      # @return [Object, []]
+      #   The dork query, or an empty Array if no dork has been defined.
+      #
+      # @see #dork
+      #
+      # @since 0.2.0
+      #
+      def dork_query
+        if @dork_block
+          @dork_block.call()
+        else
+          []
+        end
       end
 
       protected
+
+      #
+      # Registers a given block to be called when the dork is performed.
+      #
+      # @yield []
+      #   The given block will be called when {#dork_query} is called.
+      #
+      # @return [Dork]
+      #   The dork.
+      #
+      # @since 0.2.0
+      #
+      def dork(&block)
+        @dork_block = block
+        return self
+      end
 
       #
       # Enumerates over every page of results from the query.
@@ -90,14 +126,14 @@ module Ronin
       # @yieldparam [URI::HTTP, URI::HTTPS, String] url
       #   A URL from the query.
       #
-      # @see #dork
+      # @see #dork_query
       # @see #each_page
       # @see #each_url
       #
       # @since 0.2.0
       #
       def scan(&block)
-        query = dork()
+        query = dork_query()
 
         each_page(query) do |page|
           sleep(self.pause) if (self.pause && self.pause > 0)

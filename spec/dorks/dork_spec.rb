@@ -4,7 +4,7 @@ require 'ronin/dorks/dork'
 describe Dorks::Dork do
   context "default" do
     before(:all) do
-      @dork = Dorks::Dork.new
+      @dork = ronin_dork { }
     end
 
     it "should have a pause value greater than 0" do
@@ -17,7 +17,7 @@ describe Dorks::Dork do
       end
 
       it "should return an empty Array" do
-        @dork.dork.should == []
+        @dork.dork_query.should == []
       end
     end
 

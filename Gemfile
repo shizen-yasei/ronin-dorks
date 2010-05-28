@@ -22,6 +22,7 @@ group :doc do
     gem 'rdiscount',	'~> 1.6.3'
   end
 
+  gem 'dm-visualizer',	'~> 0.1.0'
   gem 'yard',		'~> 0.5.3'
 end
 

@@ -34,5 +34,12 @@ end
 
 task :default => :spec
 
+require 'dm-visualizer/rake/graphviz_task'
+DataMapper::Visualizer::Rake::GraphVizTask.new(
+  :bundle => [:runtime],
+  :include => ['lib'],
+  :require => ['ronin/scanners']
+)
+
 require 'yard'
 YARD::Rake::YardocTask.new

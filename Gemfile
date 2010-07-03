@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 RONIN = 'git://github.com/ronin-ruby'
 
 group(:runtime) do
-  gem 'gscraper',	'~> 0.3.0', :git => 'git://github.com/postmodern/gscraper.git'
+  gem 'gscraper',	'~> 0.3.0'
   gem 'ronin-support',	'~> 0.1.0', :git => "#{RONIN}/ronin-support.git"
   gem 'ronin',		'~> 0.4.0', :git => "#{RONIN}/ronin.git"
   gem 'ronin-scanners',	'~> 0.2.0', :git => "#{RONIN}/ronin-scanners.git"

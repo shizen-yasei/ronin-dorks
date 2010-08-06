@@ -82,6 +82,19 @@ module Ronin
       end
 
       #
+      # Determines if the dork yeilds no URLs.
+      #
+      # @return [Boolean]
+      #   Specifies whether the dork does not yield any URLs.
+      #
+      # @since 0.2.0
+      #
+      def empty?
+        each_page(dork_query) { |page| return page.empty? }
+        return true
+      end
+
+      #
       # Enumerates over every page of results from the query.
       #
       # @param [#each] query

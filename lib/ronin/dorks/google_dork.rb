@@ -55,6 +55,8 @@ module Ronin
         GScraper::Search::WebQuery.new(default_options(options),&block)
       end
 
+      alias query web_query
+
       #
       # Creates a new google dork query.
       #

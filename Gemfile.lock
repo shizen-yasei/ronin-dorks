@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: git://github.com/ronin-ruby/ronin-scanners.git
-  revision: e528f19
+  revision: 3d75934
   specs:
     ronin-scanners (0.2.0)
       nokogiri (~> 1.4.1)
@@ -37,7 +37,7 @@ GIT
 
 GIT
   remote: git://github.com/ronin-ruby/ronin.git
-  revision: c6fbac7
+  revision: 392ef51
   specs:
     ronin (0.4.0)
       activesupport (~> 3.0.0.beta3)

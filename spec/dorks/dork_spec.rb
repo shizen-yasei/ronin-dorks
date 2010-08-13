@@ -2,27 +2,25 @@ require 'spec_helper'
 require 'ronin/dorks/dork'
 
 describe Dorks::Dork do
-  context "default" do
-    before(:all) do
-      @dork = ronin_dork { }
-    end
+  it "should have a pause value greater than 0" do
+    Dorks::Dork.pause.should > 0
+  end
 
-    it "should have a pause value greater than 0" do
-      Dorks::Dork.pause.should > 0
-    end
+  context "default" do
+    subject { ronin_dork() { } }
 
     it "should return an empty Array when calling dork_query" do
-      @dork.dork_query.should == []
+      subject.dork_query.should == []
     end
 
     it "should have no results" do
-      @dork.should be_empty
+      should be_empty
     end
   end
 
   context "custom" do
-    before(:all) do
-      @dork = ronin_dork do
+    subject do
+      ronin_dork do
         dork do
           [
             [
@@ -39,7 +37,7 @@ describe Dorks::Dork do
     end
 
     it "should enumerate over the results, in each page, in the query" do
-      @dork.each.to_a.should == [
+      subject.each.to_a.should == [
         URI('http://www.example.com/'),
         URI('http://www.ruby-lang.org/'),
         URI('http://www.rubyflow.com/'),
@@ -49,10 +47,10 @@ describe Dorks::Dork do
 
     it "should pause between pages" do
       t1 = Time.now
-      @dork.each { |result| }
+      subject.each { |result| }
       t2 = Time.now
 
-      (t2 - t1).should >= @dork.pause
+      (t2 - t1).should >= subject.pause
     end
   end
 end

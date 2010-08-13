@@ -3,6 +3,6 @@ require 'ronin/dorks/version'
 
 describe Dorks do
   it "should have a version" do
-    Dorks.const_defined?('VERSION').should == true
+    subject.const_defined?('VERSION').should == true
   end
 end

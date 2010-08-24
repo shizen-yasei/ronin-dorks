@@ -166,5 +166,5 @@ DEPENDENCIES
   ronin (~> 0.4.0)!
   ronin-scanners (~> 0.2.0)!
   ronin-support (~> 0.1.0)!
-  rspec (~> 2.0.0.beta.16)
+  rspec (~> 2.0.0.beta.20)
   yard (~> 0.5.3)

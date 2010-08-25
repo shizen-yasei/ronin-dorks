@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
+DATA_MAPPER = 'git://github.com/datamapper'
 RONIN = 'git://github.com/ronin-ruby'
 
 # DataMapper dependencies
-gem 'dm-core',	'~> 1.0.0', :git => 'git://github.com/datamapper/dm-core.git'
+gem 'dm-core',		'~> 1.0.0', :git => "#{DATA_MAPPER}/dm-core.git"
 gem 'dm-migrations',	'~> 1.0.0', :git => 'git://github.com/postmodern/dm-migrations.git'
 
-gem 'gscraper',	'~> 0.3.0'
+gem 'gscraper',		'~> 0.3.0'
 gem 'ronin-support',	'~> 0.1.0', :git => "#{RONIN}/ronin-support.git"
 gem 'ronin',		'~> 0.4.0', :git => "#{RONIN}/ronin.git"
 gem 'ronin-scanners',	'~> 0.2.0', :git => "#{RONIN}/ronin-scanners.git"

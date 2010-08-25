@@ -15,9 +15,11 @@ GIT
 
 GIT
   remote: git://github.com/ronin-ruby/ronin-scanners.git
-  revision: 3ecaac2
+  revision: 6891c8a
   specs:
     ronin-scanners (0.2.0)
+      dm-core (~> 1.0.0)
+      dm-migrations (~> 1.0.0)
       nokogiri (~> 1.4.1)
       open_namespace (~> 0.3.0)
       parameters (~> 0.2.2)
@@ -29,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/ronin-ruby/ronin-support.git
-  revision: 11ea346
+  revision: 3d9ca06
   specs:
     ronin-support (0.1.0)
       chars (~> 0.1.2)
@@ -37,10 +39,10 @@ GIT
 
 GIT
   remote: git://github.com/ronin-ruby/ronin.git
-  revision: f63298d
+  revision: 187d5b6
   specs:
     ronin (0.4.0)
-      activesupport (~> 3.0.0.beta3)
+      activesupport (~> 3.0.0.rc)
       contextify (~> 0.1.6)
       data_paths (~> 0.2.1)
       dm-aggregates (~> 1.0.0)
@@ -59,12 +61,12 @@ GIT
       parameters (~> 0.2.2)
       pullr (~> 0.1.2)
       ronin-support (~> 0.1.0)
-      thor (~> 0.13.0)
+      thor (~> 0.14.0)
       tzinfo (~> 0.3.22)
 
 GIT
   remote: git://github.com/technicalpickles/jeweler.git
-  revision: 2a40fdc
+  revision: 62f2651
   specs:
     jeweler (1.5.0.pre)
       bundler (>= 1.0.0.rc.5)
@@ -74,7 +76,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (3.0.0.rc)
+    activesupport (3.0.0.rc2)
     addressable (2.2.0)
     chars (0.1.2)
       yard (>= 0.2.3.5)
@@ -132,21 +134,21 @@ GEM
     rake (0.8.7)
     rdiscount (1.6.5)
     rprogram (0.1.8)
-    rspec (2.0.0.beta.18)
-      rspec-core (= 2.0.0.beta.18)
-      rspec-expectations (= 2.0.0.beta.18)
-      rspec-mocks (= 2.0.0.beta.18)
-    rspec-core (2.0.0.beta.18)
-    rspec-expectations (2.0.0.beta.18)
+    rspec (2.0.0.beta.20)
+      rspec-core (= 2.0.0.beta.20)
+      rspec-expectations (= 2.0.0.beta.20)
+      rspec-mocks (= 2.0.0.beta.20)
+    rspec-core (2.0.0.beta.20)
+    rspec-expectations (2.0.0.beta.20)
       diff-lcs (>= 1.1.2)
-    rspec-mocks (2.0.0.beta.18)
+    rspec-mocks (2.0.0.beta.20)
     ruby-graphviz (0.9.16)
     ruby-nmap (0.1.1)
       nokogiri (>= 1.4.0)
       rprogram (>= 0.1.8)
     spidr (0.2.7)
     stringex (1.1.0)
-    thor (0.13.8)
+    thor (0.14.0)
     tzinfo (0.3.23)
     uuidtools (2.1.1)
     yard (0.5.8)

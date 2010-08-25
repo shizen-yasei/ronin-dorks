@@ -14,6 +14,14 @@ GIT
       dm-core (~> 1.0.0)
 
 GIT
+  remote: git://github.com/postmodern/gscraper.git
+  revision: dee0a43
+  specs:
+    gscraper (0.3.1)
+      json_pure (~> 1.4.0)
+      mechanize (~> 1.0.0)
+
+GIT
   remote: git://github.com/ronin-ruby/ronin-scanners.git
   revision: 6891c8a
   specs:
@@ -120,9 +128,6 @@ GEM
     extlib (0.9.15)
     fastercsv (1.5.3)
     git (1.2.5)
-    gscraper (0.3.0)
-      json_pure (~> 1.4.0)
-      mechanize (~> 1.0.0)
     json_pure (1.4.6)
     mechanize (1.0.0)
       nokogiri (>= 1.2.1)
@@ -161,7 +166,7 @@ DEPENDENCIES
   dm-core (~> 1.0.0)!
   dm-migrations (~> 1.0.0)!
   dm-visualizer (~> 0.1.0)
-  gscraper (~> 0.3.0)
+  gscraper (~> 0.3.1)!
   jeweler (~> 1.5.0)!
   rake (~> 0.8.7)
   rdiscount (~> 1.6.3)

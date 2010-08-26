@@ -1,20 +1,20 @@
 GIT
-  remote: git://github.com/datamapper/dm-core.git
-  revision: fc51abc
+  remote: http://github.com/datamapper/dm-core.git
+  revision: cd3340c
   specs:
     dm-core (1.0.0)
       addressable (~> 2.1)
       extlib (~> 0.9.15)
 
 GIT
-  remote: git://github.com/postmodern/dm-migrations.git
+  remote: http://github.com/postmodern/dm-migrations.git
   revision: 01ab4df
   specs:
     dm-migrations (1.0.0)
       dm-core (~> 1.0.0)
 
 GIT
-  remote: git://github.com/postmodern/gscraper.git
+  remote: http://github.com/postmodern/gscraper.git
   revision: dee0a43
   specs:
     gscraper (0.3.1)
@@ -22,8 +22,8 @@ GIT
       mechanize (~> 1.0.0)
 
 GIT
-  remote: git://github.com/ronin-ruby/ronin-scanners.git
-  revision: 6891c8a
+  remote: http://github.com/ronin-ruby/ronin-scanners.git
+  revision: 36e65f8
   specs:
     ronin-scanners (0.2.0)
       dm-core (~> 1.0.0)
@@ -38,16 +38,16 @@ GIT
       spidr (~> 0.2.4)
 
 GIT
-  remote: git://github.com/ronin-ruby/ronin-support.git
-  revision: 3d9ca06
+  remote: http://github.com/ronin-ruby/ronin-support.git
+  revision: 037d416
   specs:
     ronin-support (0.1.0)
       chars (~> 0.1.2)
       data_paths (~> 0.2.1)
 
 GIT
-  remote: git://github.com/ronin-ruby/ronin.git
-  revision: 187d5b6
+  remote: http://github.com/ronin-ruby/ronin.git
+  revision: bd9af84
   specs:
     ronin (0.4.0)
       activesupport (~> 3.0.0.rc)
@@ -73,7 +73,7 @@ GIT
       tzinfo (~> 0.3.22)
 
 GIT
-  remote: git://github.com/technicalpickles/jeweler.git
+  remote: http://github.com/technicalpickles/jeweler.git
   revision: 62f2651
   specs:
     jeweler (1.5.0.pre)

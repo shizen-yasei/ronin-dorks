@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
-  s.date = %q{2010-08-24}
+  s.date = %q{2010-08-29}
   s.default_executable = %q{ronin-dorks}
   s.description = %q{Ronin Dorks is a Ruby library for Ronin that provides support for various Google (tm) Dorks functionality.}
   s.email = %q{postmodern.mod3@gmail.com}
@@ -62,9 +62,10 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<contextify>, ["~> 0.1.6"])
       s.add_runtime_dependency(%q<dm-core>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<dm-migrations>, ["~> 1.0.0"])
-      s.add_runtime_dependency(%q<gscraper>, ["~> 0.3.0"])
+      s.add_runtime_dependency(%q<gscraper>, ["~> 0.3.1"])
       s.add_runtime_dependency(%q<ronin-support>, ["~> 0.1.0"])
       s.add_runtime_dependency(%q<ronin>, ["~> 0.4.0"])
       s.add_runtime_dependency(%q<ronin-scanners>, ["~> 0.2.0"])
@@ -73,9 +74,10 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.0.0.beta.20"])
     else
+      s.add_dependency(%q<contextify>, ["~> 0.1.6"])
       s.add_dependency(%q<dm-core>, ["~> 1.0.0"])
       s.add_dependency(%q<dm-migrations>, ["~> 1.0.0"])
-      s.add_dependency(%q<gscraper>, ["~> 0.3.0"])
+      s.add_dependency(%q<gscraper>, ["~> 0.3.1"])
       s.add_dependency(%q<ronin-support>, ["~> 0.1.0"])
       s.add_dependency(%q<ronin>, ["~> 0.4.0"])
       s.add_dependency(%q<ronin-scanners>, ["~> 0.2.0"])
@@ -85,9 +87,10 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rspec>, ["~> 2.0.0.beta.20"])
     end
   else
+    s.add_dependency(%q<contextify>, ["~> 0.1.6"])
     s.add_dependency(%q<dm-core>, ["~> 1.0.0"])
     s.add_dependency(%q<dm-migrations>, ["~> 1.0.0"])
-    s.add_dependency(%q<gscraper>, ["~> 0.3.0"])
+    s.add_dependency(%q<gscraper>, ["~> 0.3.1"])
     s.add_dependency(%q<ronin-support>, ["~> 0.1.0"])
     s.add_dependency(%q<ronin>, ["~> 0.4.0"])
     s.add_dependency(%q<ronin-scanners>, ["~> 0.2.0"])

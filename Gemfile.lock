@@ -79,15 +79,6 @@ GIT
       thor (~> 0.14.0)
       tzinfo (~> 0.3.22)
 
-GIT
-  remote: http://github.com/technicalpickles/jeweler.git
-  revision: 62f2651
-  specs:
-    jeweler (1.5.0.pre)
-      bundler (>= 1.0.0.rc.5)
-      git (>= 1.2.5)
-      rake
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -134,6 +125,10 @@ GEM
     extlib (0.9.15)
     fastercsv (1.5.3)
     git (1.2.5)
+    jeweler (1.5.0.pre2)
+      bundler (>= 1.0.0.rc.5)
+      git (>= 1.2.5)
+      rake
     json_pure (1.4.6)
     mechanize (1.0.0)
       nokogiri (>= 1.2.1)
@@ -177,7 +172,7 @@ DEPENDENCIES
   dm-migrations (~> 1.0.0)!
   dm-visualizer (~> 0.1.0)
   gscraper (~> 0.3.1)!
-  jeweler (~> 1.5.0)!
+  jeweler (~> 1.5.0.pre)
   rake (~> 0.8.7)
   rdiscount (~> 1.6.3)
   ronin (~> 0.4.0)!

@@ -158,7 +158,7 @@ GEM
     tzinfo (0.3.23)
     uri-query_params (0.4.0)
     uuidtools (2.1.1)
-    yard (0.5.8)
+    yard (0.6.0)
     yard-contextify (0.1.0)
       yard (>= 0.4.0)
 
@@ -178,5 +178,5 @@ DEPENDENCIES
   ronin-scanners (~> 0.2.0)!
   ronin-support (~> 0.1.0)!
   rspec (~> 2.0.0.beta.20)
-  yard (~> 0.5.3)
+  yard (~> 0.6.0)
   yard-contextify (~> 0.1.0)

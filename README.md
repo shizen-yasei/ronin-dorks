@@ -6,7 +6,7 @@
 * [groups.google.com/group/ronin-ruby](http://groups.google.com/group/ronin-ruby)
 * irc.freenode.net #ronin
 
-## DESCRIPTION:
+## Description
 
 Ronin Dorks is a Ruby library for Ronin that provides support for various
 Google (tm) Dorks functionality.
@@ -36,7 +36,7 @@ data via Overlays. Overlays are directories of code and data that can be
 hosted on any SVN, Hg, Git or Rsync server. Ronin makes it easy to create,
 install or update Overlays.
 
-## FEATURES/PROBLEMS:
+## Features
 
 * Provides convenience methods for many common Google (tm) Dorks:
   * Search for URLs containing a specified string.
@@ -55,13 +55,13 @@ install or update Overlays.
   * Search for `emails.xls` files.
   * Search for `finances.xls` files.
 
-## SYNOPSIS:
+## Synopsis
 
 Start the Ronin console with Ronin Dorks preloaded:
 
     $ ronin dorks
 
-## EXAMPLES:
+## Examples
 
 Search for URLs containing a pattern:
 
@@ -87,16 +87,16 @@ Search for pages containing all specified text:
 
     Web::Dorks.allintext(['Powered by', '0.5'])
 
-## REQUIREMENTS:
+## Requirements
 
 * [ronin](http://ronin.rubyforge.org/) >= 0.3.0
 * [gscraper](http://gscraper.rubyforge.org/) >= 0.2.2
 
-## INSTALL:
+## Install
 
     $ sudo gem install ronin-dorks
 
-## LICENSE:
+## License
 
 Ronin Dorks - A Ruby library for Ronin that provides support for various
 Google (tm) Dorks and Hacking functionality.

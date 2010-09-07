@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
 
 DATA_MAPPER = 'http://github.com/datamapper'
+DM_VERSION = '~> 1.0.1'
 RONIN = 'http://github.com/ronin-ruby'
 
-gem 'contextify',	'~> 0.1.6', :git => 'http://github.com/postmodern/contextify.git'
-
 # DataMapper dependencies
-gem 'dm-core',		'~> 1.0.0', :git => "#{DATA_MAPPER}/dm-core.git"
-gem 'dm-migrations',	'~> 1.0.0', :git => 'http://github.com/postmodern/dm-migrations.git'
+gem 'dm-migrations',	DM_VERSION, :git => 'http://github.com/postmodern/dm-migrations.git', :branch => 'runner'
 
+gem 'contextify',	'~> 0.1.6', :git => 'http://github.com/postmodern/contextify.git'
 gem 'gscraper',		'~> 0.3.1', :git => 'http://github.com/postmodern/gscraper.git'
 gem 'ronin-support',	'~> 0.1.0', :git => "#{RONIN}/ronin-support.git"
 gem 'ronin',		'~> 0.4.0', :git => "#{RONIN}/ronin.git"

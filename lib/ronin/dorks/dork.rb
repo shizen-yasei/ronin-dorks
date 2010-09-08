@@ -20,7 +20,6 @@
 #
 
 require 'ronin/scanners/url_scanner'
-require 'ronin/network/http'
 
 module Ronin
   module Dorks

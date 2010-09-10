@@ -89,8 +89,9 @@ Search for pages containing all specified text:
 
 ## Requirements
 
-* [ronin](http://ronin.rubyforge.org/) >= 0.3.0
-* [gscraper](http://gscraper.rubyforge.org/) >= 0.2.2
+* [gscraper](http://github.com/postmodern/gscraper) ~> 0.3.1
+* [ronin](http://github.com/ronin-ruby/ronin) ~> 0.4.0
+* [ronin-scanners](http://github.com/ronin-ruby/ronin-scanners) ~> 0.2.0
 
 ## Install
 

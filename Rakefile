@@ -19,7 +19,7 @@ Jeweler::Tasks.new do |gem|
   gem.license = ['GPL-2']
   gem.summary = %Q{A Ruby library for Ronin that provides support for various Google (tm) Dorks functionality.}
   gem.description = %Q{Ronin Dorks is a Ruby library for Ronin that provides support for various Google (tm) Dorks functionality.}
-  gem.email = 'postmodern.mod3@gmail.com'
+  gem.email = 'ronin-ruby@googlegroups.com'
   gem.homepage = 'http://github.com/ronin-ruby/ronin-dorks'
   gem.authors = ['Postmodern']
   gem.has_rdoc = 'yard'

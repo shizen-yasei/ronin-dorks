@@ -1,6 +1,5 @@
 # Ronin Dorks
 
-* [ronin.rubyforge.org/docs/ronin-dorks](http://ronin.rubyforge.org/docs/ronin-dorks/)
 * [github.com/postmodern/ronin-dorks](http://github.com/postmodern/ronin-dorks)
 * [github.com/postmodern/ronin-dorks/issues](http://github.com/postmodern/ronin-dorks/issues)
 * [groups.google.com/group/ronin-ruby](http://groups.google.com/group/ronin-ruby)

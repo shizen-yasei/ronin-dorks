@@ -9,11 +9,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
-  s.date = %q{2010-10-15}
-  s.default_executable = %q{ronin-dorks}
+  s.date = %q{2010-10-16}
   s.description = %q{Ronin Dorks is a Ruby library for Ronin that provides support for various Google (tm) Dorks functionality.}
   s.email = %q{ronin-ruby@googlegroups.com}
-  s.executables = ["ronin-dorks"]
+  s.executables = ["ronin-dork", "ronin-dorks"]
   s.extra_rdoc_files = [
     "ChangeLog.md",
     "README.md"
@@ -29,11 +28,13 @@ Gem::Specification.new do |s|
     "Manifest.txt",
     "README.md",
     "Rakefile",
+    "bin/ronin-dork",
     "bin/ronin-dorks",
     "lib/ronin/dorks.rb",
     "lib/ronin/dorks/dork.rb",
     "lib/ronin/dorks/google_dork.rb",
     "lib/ronin/dorks/version.rb",
+    "lib/ronin/ui/command_line/commands/dork.rb",
     "lib/ronin/web/dorks.rb",
     "lib/ronin/web/dorks/documents.rb",
     "lib/ronin/web/dorks/dorks.rb",

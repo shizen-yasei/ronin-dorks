@@ -1,0 +1,15 @@
+name: ronin-dorks
+summary: A Ruby library for Ronin that provides support for various Google (tm) Dorks functionality.
+description:
+  Ronin Dorks is a Ruby library for Ronin that provides support for various
+  Google (tm) Dorks functionality.
+
+license: GPL-2
+authors: Postmodern
+email: postmodern.mod3@gmail.com
+homepage: http://github.com/ronin-ruby/ronin-dorks
+has_yard: true
+
+development_dependencies:
+  bundler: ~> 1.0.0
+  yard: ~> 0.6.1

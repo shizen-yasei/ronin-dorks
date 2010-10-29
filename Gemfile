@@ -10,8 +10,8 @@ gem 'dm-migrations',	DM_VERSION, :git => 'http://github.com/postmodern/dm-migrat
 gem 'gscraper',		'~> 0.3.1', :git => 'http://github.com/postmodern/gscraper.git'
 
 # Ronin dependencies
-gem 'ronin',		'~> 0.4.0', :git => "#{RONIN}/ronin.git"
 gem 'ronin-support',	'~> 0.1.0', :git => "#{RONIN}/ronin-support.git"
+gem 'ronin',		'~> 0.4.0', :git => "#{RONIN}/ronin.git"
 gem 'ronin-gen',	'~> 0.3.0', :git => "#{RONIN}/ronin-gen.git"
 gem 'ronin-exploits',	'~> 0.4.0', :git => "#{RONIN}/ronin-exploits.git"
 gem 'ronin-scanners',	'~> 0.2.0', :git => "#{RONIN}/ronin-scanners.git"

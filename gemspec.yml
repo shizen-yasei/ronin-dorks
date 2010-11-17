@@ -13,7 +13,7 @@ has_yard: true
 dependencies:
   # Ronin dependencies:
   # ronin-support: ~> 0.1.0
-  # ronin: ~> 0.4.0
+  # ronin: ~> 1.0.0
   # ronin-gen: ~> 0.3.0
   # ronin-exploits: ~> 0.4.0
   # ronin-scanners: ~> 0.2.0

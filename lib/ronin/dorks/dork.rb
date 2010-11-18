@@ -115,8 +115,8 @@ module Ronin
       #
       # Enumerates over every page of results from the query.
       #
-      # @param [#each] query
-      #   The query object.
+      # @param [#each, URI::HTTP, String] query
+      #   The query object or a single URL.
       #
       # @yield [page]
       #   The given block will be passed every page.
@@ -127,14 +127,18 @@ module Ronin
       # @since 0.2.0
       #
       def each_page(query,&block)
-        query.each(&block)
+        if query.kind_of?(Enumerable)
+          query.each(&block)
+        else
+          block.call(query)
+        end
       end
 
       #
       # Enumerates over every URL within a page.
       #
-      # @param [#each] page
-      #   The page of URLs.
+      # @param [#each, URI::HTTP, String] page
+      #   The page of URLs or a single URL.
       #
       # @yield [url]
       #   The given block will be pass every URL.
@@ -145,7 +149,11 @@ module Ronin
       # @since 0.2.0
       #
       def each_url(page,&block)
-        page.each(&block)
+        if page.kind_of?(Enumerable)
+          page.each(&block)
+        else
+          block.call(page)
+        end
       end
 
       #

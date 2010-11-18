@@ -24,9 +24,10 @@ require 'ronin/scanners/url_scanner'
 module Ronin
   module Dorks
     #
-    # {Dork} is the base-class for all "dork" searches which perform queries for
-    # interesting URLs. While {Dork} is inherited by {GoogleDork}, one
-    # can write unique dorks which find URLs from other sources:
+    # {Dork} is the base-class for all "dork" searches which perform
+    # queries for interesting URLs. While {Dork} is inherited by
+    # {GoogleDork}, one can write unique dorks which find URLs from other
+    # sources:
     #
     #     ronin_dork do
     #

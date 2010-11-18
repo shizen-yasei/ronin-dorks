@@ -28,9 +28,11 @@ module Ronin
     #
     # Represents "google dorks" which query Google to find interesting URLs.
     #
+    #     #
+    #     # Finds JBoss Seam installs.
+    #     #
     #     ronin_google_dork do
     #
-    #       # finds JBoss Seam installs
     #       dork { query(:filetype => 'seam') }
     #
     #     end

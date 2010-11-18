@@ -62,29 +62,31 @@ Start the Ronin console with Ronin Dorks preloaded:
 
 ## Examples
 
-Search for URLs containing a pattern:
+Google Dorks:
 
-    Web::Dorks.inurl('stmt=')
+    #
+    # Finds JBoss Seam installs.
+    #
+    ronin_google_dork do
+    
+      dork { query(:filetype => 'seam') }
+    
+    end
 
-Search for URLs containing all patterns:
+Custom Dorks:
 
-    Web::Dorks.allinurl(['show', 'php', 'page'])
-
-Search for pages containing the specified text in the title:
-
-    Web::Dorks.intitle('Profile')
-
-Search for pages containing all specified text in the title:
-
-    Web::Dorks.allintitle(['Profile', 'Edit'])
-
-Search for pages containing the specified text:
-
-    Web::Dorks.intext('Powered by')
-
-Search for pages containing all specified text:
-
-    Web::Dorks.allintext(['Powered by', '0.5'])
+    ronin_dork do
+    
+      parameter :query, :description => 'The query string'
+    
+      dork do
+        url = "http://sketchy.com/search?q=#{URI.escape(@query)}&format=txt"
+        response = Net.http_get_body(:url => url)
+    
+        [response.lines.map { |line| line.chomp }]
+      end
+    
+    end
 
 ## Requirements
 

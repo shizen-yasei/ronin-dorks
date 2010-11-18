@@ -23,6 +23,24 @@ require 'ronin/scanners/url_scanner'
 
 module Ronin
   module Dorks
+    #
+    # {Dork} is the base-class for all "dork" searches which perform queries for
+    # interesting URLs. While {Dork} is inherited by {GoogleDork}, one
+    # can write unique dorks which find URLs from other sources:
+    #
+    #     ronin_dork do
+    #
+    #       parameter :query, :description => 'The query string'
+    #
+    #       dork do
+    #         url = "http://sketchy.com/search?q=#{URI.escape(@query)}&format=txt"
+    #         response = Net.http_get_body(:url => url)
+    #
+    #         [response.lines.map { |line| line.chomp }]
+    #       end
+    #
+    #     end
+    #
     class Dork < Scanners::URLScanner
 
       contextify :ronin_dork

@@ -25,6 +25,16 @@ require 'gscraper/search'
 
 module Ronin
   module Dorks
+    #
+    # Represents "google dorks" which query Google to find interesting URLs.
+    #
+    #     ronin_google_dork do
+    #
+    #       # finds JBoss Seam installs
+    #       dork { query(:filetype => 'seam') }
+    #
+    #     end
+    #
     class GoogleDork < Dork
 
       contextify :ronin_google_dork

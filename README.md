@@ -1,8 +1,9 @@
 # Ronin Dorks
 
-* [github.com/postmodern/ronin-dorks](http://github.com/postmodern/ronin-dorks)
-* [github.com/postmodern/ronin-dorks/issues](http://github.com/postmodern/ronin-dorks/issues)
-* [groups.google.com/group/ronin-ruby](http://groups.google.com/group/ronin-ruby)
+* [Source](http://github.com/postmodern/ronin-dorks)
+* [Issues](http://github.com/postmodern/ronin-dorks/issues)
+* [Documentation](http://rubydoc.info/github/ronin-ruby/ronin-dorks/frames)
+* [Mailing List](http://groups.google.com/group/ronin-ruby)
 * irc.freenode.net #ronin
 
 ## Description

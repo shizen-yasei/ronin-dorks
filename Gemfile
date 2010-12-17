@@ -4,10 +4,6 @@ DATA_MAPPER = 'http://github.com/datamapper'
 DM_VERSION = '~> 1.0.2'
 RONIN = 'http://github.com/ronin-ruby'
 
-# DataMapper dependencies
-gem 'dm-migrations',	DM_VERSION, :git => 'http://github.com/postmodern/dm-migrations.git',
-                                  :branch => 'runner'
-
 gem 'gscraper',       '~> 0.3.1', :git => 'http://github.com/postmodern/gscraper.git'
 
 # Ronin dependencies

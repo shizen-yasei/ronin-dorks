@@ -29,5 +29,4 @@ group :development do
   gem 'rspec',        '~> 2.0.0'
 
   gem 'dm-visualizer',    '~> 0.1.0'
-  gem 'yard-contextify',	'~> 0.1.0'
 end
